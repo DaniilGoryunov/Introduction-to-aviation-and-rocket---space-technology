@@ -1,1 +1,1 @@
-# Introduction to aviation and rocket space technology
+# Моделирование запуска ракетоносителя, цель которого состоит в получении снимков обратной стороны луны
