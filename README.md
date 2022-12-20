@@ -17,5 +17,5 @@
 <https://spacedock.ru/index.php?do=download&id=5064>
 
 ## AP-for-KSP
-Автопилот для ракетоносителя в KSP (написан на языке, предложенном дополнением KOS для KSP
+Автопилот для ракетоносителя в KSP (написан на языке, предложенном дополнением KOS для KSP \
 Само дополнение: <https://github.com/KSP-KOS/KOS/releases>
