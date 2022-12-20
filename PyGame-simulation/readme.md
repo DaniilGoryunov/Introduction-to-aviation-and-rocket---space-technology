@@ -1,3 +1,5 @@
+В данном файле представлена программа для визуализции гравитационного маневра на языке "Python" с помощью библиотеки PyGame
+
 ```c:/PyGame-Simulation/simulation.py
 import pygame, math
 from pygame import *
