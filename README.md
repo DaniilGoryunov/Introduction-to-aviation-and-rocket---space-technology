@@ -8,7 +8,7 @@
 Отчет по проекту [Report](./Report/README.md)
 
 ## Data From KSP 
-В таблице собраны все, полученные в ходе полета, данные [DATA](./Data-from-KSP/README.md)
+В таблице собраны все полученные в ходе полета данные [DATA](./Data-from-KSP/README.md)
 
 ## PyGame-simulation 
 В папке находится код на языке Python, с помощью которого можно наглядно рассмотреть суть гравитационного маневра [Py](./PyGame-simulation/readme.md)
