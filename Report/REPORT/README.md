@@ -4,50 +4,24 @@
 **МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ**
 
 **РОССИЙСКОЙ ФЕДЕРАЦИИ**
-**
 
 
 **ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ**   
 
-` `**УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ**
+**УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ**
 
 **«МОСКОВСКИЙ АВИАЦИОННЫЙ ИНСТИТУТ**
 
-` 		`**(национальный исследовательский университет)»**
-**
+**(национальный исследовательский университет)»**
 
-**
+**Зачетная работа по теме "Получение снимков обратной стороны луны**  
 
-**
-
-**
-
-**
-
-
-**Зачетная работа**  
-
-|**На тему:**|**Получение фотографий обратной стороны Луны**|
+|**Участник**|**Роль**|
 | :-: | :-: |
-** 
-**
-
-**
-
-**
-
-**
-
-**
-
-
-|**Авторы курсовой работы:**|<p>**Горюнов Д.В.,** </p><p>**Караев Т.Ж., Иванов А.К., Кудрявов Л.В.**</p>|** |** |
-| :-: | - | :-: | :-: |
-|** |** |** |** |
-|**Преподаватели:**|**Кондратцев В. Л., Тимохин М. Ю.**|** |**                |
-|** |** |** |
-|||||||||
-**   
+|Иванов А.К|Копирайтер|
+|Горюнов Д.В|Тимлид, KSP|
+|Караев Т.Ж|Программист|
+|Кудрявов Л.В|Математик|
 
 **Москва 2022**
 
@@ -61,7 +35,7 @@
 
 **Участники:** Горюнов Д.В., Караев Т.Ж., Иванов А.К., Кудрявов Л.В.
 
-**Введение**
+## Введение
 
 **Цель**:
 
@@ -78,29 +52,12 @@
 1. Составить отчёт о проделанной работе 
 1. Грамотно представить проект зрителю 
 
-**Состав команды:**
 
-
-|**Участник**|**Роль**|
-| :-: | :-: |
-|Иванов А.К|Копирайтер|
-|Горюнов Д.В|Тимлид, KSP|
-|Караев Т.Ж|Программист|
-|Кудрявов Л.В|Математик|
-
-
-
-
-
-
-
-
-**Глава 1. Описание реальной миссии.**
+## Глава 1. Описание реальной миссии
 
 **Цель миссии**
 
 Основной целью космической миссии являлась передача снимков обратной стороны Луны на Землю.
-
 
 
 **Описание миссии**
@@ -151,7 +108,7 @@
 
 [^2]
 
-**Глава 2.  Описание математической и физической моделей**
+## Глава 2.  Описание математической и физической моделей
 
 **Математическая модель**
 
@@ -178,7 +135,7 @@
 
 Космическая ракета - это тело переменной массы, топливо сгорает, масса ракеты уменьшается. Будем называть расход топлива расходом массы. Поэтому m в знаменателе первого слагаемого правой части будет представляться некоторой линейной (так как расход топлива принят постоянным) функцией зависимости массы от времени m=f(t). Обозначим ![](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.013.png)начальную массу ракеты , массу ракеты после выработки топлива M. Тогда ![](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.014.png) есть масса топлива. Обозначим время работы двигателей T. Тогда
 
-` `![](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.015.png)
+![](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.015.png)
 
 есть расход массы в единицу времени и уравнение расхода массы примет вид:
 
@@ -264,7 +221,7 @@
 
 
 
-**Глава 3. Результаты полученные из KSP и в ходе математических вычислений. Сравнение с реальной космической миссией.**
+## Глава 3. Результаты полученные из KSP и в ходе математических вычислений. Сравнение с реальной космической миссией
 
 
 | |Первая ступень|Вторая ступень|Третья ступень|
@@ -284,35 +241,138 @@
 
 
 
-**Глава 4. Программная реализация.**
+## Глава 4. Программная реализация
 
-Для реализации полета в Kerbal Space Program[5] была разработана инструкция для автопилота:
+Для реализации полета в Kerbal Space Program была разработана инструкция для автопилота:
 
 1) включить тягу и лететь вертикально вверх, постепенно отбрасывая ступени;
 1) если апоцентр аппарата достиг отметки в 12.5 млн км, выключить тягу и лететь по инерции;
 1) если высота аппарата относительно Земли достигла значения в 12 млн км, совершить оборот на 100 градусов относительно горизонта Земли и включить тягу;
 1) если апоцентр аппарата достиг отметки в 45 млн км, выключить тягу.
 
-Далее её программное воплощение в kos[4]:
+Далее её программное воплощение в kos:
 
+```
+CLEARSCREEN.
 
-|CLEARSCREEN.<br><br>LOCK THROTTLE TO 1.0.<br><br>WHEN MAXTHRUST = 0 THEN {<br>`	`PRINT "Staging".<br>`	`STAGE.<br>`	`PRESERVE.<br>}.<br><br>WHEN MAXTHRUST = 0 THEN {<br>`	`PRINT "Staging".<br>`	`STAGE.<br>`	`PRESERVE.<br>}.<br><br>WHEN MAXTHRUST = 0 THEN {<br>`	`PRINT "Staging".<br>`	`STAGE.<br>`	`PRESERVE.<br>}.<br><br>LOCK STEERING TO HEADING(90, 90). <br><br>WHEN SHIP:APOAPSIS > 12500000 THEN {<br>`	`LOCK THROTTLE TO 0.0.<br>`	`WAIT UNTIL SHIP:ALTITUDE > 12000000.<br>`	`LOCK STEERING TO HEADING(90, -10).<br>`	`WAIT 5.<br>`	`LOCK THROTTLE TO 1.0.<br>`	`WAIT UNTIL APOAPSIS > 45000000.<br>`	`LOCK THROTTLE TO 0.0.<br>`	`PRESERVE.	<br>}.<br><br>WAIT UNTIL SHIP:ALTITUDE > 1000000000.|
-| :- |
+LOCK THROTTLE TO 1.0.
+
+WHEN MAXTHRUST = 0 THEN {
+	PRINT "Staging".
+	STAGE.
+	PRESERVE.
+}.
+
+WHEN MAXTHRUST = 0 THEN {
+	PRINT "Staging".
+	STAGE.
+	PRESERVE.
+}.
+
+WHEN MAXTHRUST = 0 THEN {
+	PRINT "Staging".
+	STAGE.
+	PRESERVE.
+}.
+
+LOCK STEERING TO HEADING(90, 90). 
+
+WHEN SHIP:APOAPSIS > 12500000 THEN {
+	LOCK THROTTLE TO 0.0.
+	WAIT UNTIL SHIP:ALTITUDE > 12000000.
+	LOCK STEERING TO HEADING(90, -10).
+	WAIT 5.
+	LOCK THROTTLE TO 1.0.
+	WAIT UNTIL APOAPSIS > 45000000.
+	LOCK THROTTLE TO 0.0.
+	PRESERVE.	
+}.
+
+WAIT UNTIL SHIP:ALTITUDE > 1000000000.
+```
 
 Также для визуализации явления гравитационного маневра была разработана программа на языке Python с использованием библиотеки PyGame.[4]Программа рисует на дисплее объекты в виде окружностей. Она просчитывает взаимное притяжение объектов при помощи законов Ньютона, а затем меняет их координаты.
 
-|import pygame, math<br>from pygame import \*<br>from math import \*<br><br>WIN\_WIDTH = 800<br>WIN\_HEIGHT = 640<br>PLANET\_WIDTH = 20<br>PLANET\_HEIGHT = 20<br>DISPLAY = (WIN\_WIDTH, WIN\_HEIGHT)<br>SPACE\_COLOR = "#000022"<br>SUN\_COLOR = "yellow"<br>PLANET\_COLOR = "blue"<br><br>X0 = WIN\_WIDTH // 2<br>Y0 = WIN\_HEIGHT // 2<br>M0 = 5000<br>CRASH\_DIST = 10<br>OUT\_DIST = 1000<br><br>def main():<br>`    `pygame.init()<br>`    `screen = pygame.display.set\_mode(DISPLAY)<br>    <br>`    `bg = Surface((WIN\_WIDTH,WIN\_HEIGHT))<br>`    `bg.fill(Color(SPACE\_COLOR))     <br>`    `draw.circle (bg, Color(SUN\_COLOR), (X0, Y0), 10)<br>                                    <br>`    `timer = pygame.time.Clock()<br>    <br>`    `planet = Surface((PLANET\_WIDTH, PLANET\_HEIGHT))<br>`    `planet.fill(Color(SPACE\_COLOR))<br>`    `draw.circle (planet,<br>`        `Color(PLANET\_COLOR),<br>`        `(PLANET\_WIDTH // 2, PLANET\_HEIGHT // 2), 5)<br><br>`    `r = 0.0<br>`    `x = 100.0<br>`    `y = 290.0<br>`    `vx = 0.1<br>`    `vy = 1.5<br>`    `ax = 0.0<br>`    `ay = 0.0<br><br>`    `done = False<br>`    `while not done:<br>`        `timer.tick(25)<br>`        `for e in pygame.event.get():<br>`            `if e.type == QUIT:<br>`                `done = True<br>`                `break        <br><br>`        `r = sqrt((x - X0)\*\*2 + (y - Y0)\*\*2)<br>        <br>`        `ax = M0 \* (X0 - x) / r\*\*3<br>`        `ay = M0 \* (Y0 - y) / r\*\*3<br><br>`        `vx += ax<br>`        `vy += ay<br><br>`        `x += vx<br>`        `y += vy<br><br>`        `screen.blit(bg, (0, 0))      <br>`        `screen.blit(planet, (int(x), int(y)))<br>`        `pygame.display.update()     <br><br>`        `if r < CRASH\_DIST:<br>`            `done = True<br>`            `print("Crashed")<br>`            `break<br>`        `if r > OUT\_DIST:<br>`            `done = True<br>`            `print("Out of system")<br>`            `break<br><br>if name == "main": main()|
-| :- |
+```py:/PyGame-simulation/simulation.py
+import pygame, math
+from pygame import *
+from math import *
 
-##
-##
-##
-##
-##
-##
-##
-## [^3]
-## **Данные и графики**
+WIN_WIDTH = 800
+WIN_HEIGHT = 640
+PLANET_WIDTH = 20
+PLANET_HEIGHT = 20
+DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
+SPACE_COLOR = "#000022"
+SUN_COLOR = "yellow"
+PLANET_COLOR = "blue"
+
+X0 = WIN_WIDTH // 2
+Y0 = WIN_HEIGHT // 2
+M0 = 5000
+CRASH_DIST = 10
+OUT_DIST = 1000
+
+def main():
+    pygame.init()
+    screen = pygame.display.set_mode(DISPLAY)
+    
+    bg = Surface((WIN_WIDTH,WIN_HEIGHT))
+    bg.fill(Color(SPACE_COLOR))
+    draw.circle (bg, Color(SUN_COLOR), (X0, Y0), 10)
+                                    
+    timer = pygame.time.Clock()
+    
+    planet = Surface((PLANET_WIDTH, PLANET_HEIGHT))
+    planet.fill(Color(SPACE_COLOR))
+    draw.circle (planet,
+        Color(PLANET_COLOR),
+        (PLANET_WIDTH // 2, PLANET_HEIGHT // 2), 5)
+
+    r = 0.0
+    x = 100.0
+    y = 290.0
+    vx = 0.1
+    vy = 1.5
+    ax = 0.0
+    ay = 0.0
+
+    done = False
+    while not done:
+        timer.tick(25)
+        for e in pygame.event.get():
+            if e.type == QUIT:
+                done = True
+                break
+
+        r = sqrt((x - X0)**2 + (y - Y0)**2)
+        
+        ax = M0 * (X0 - x) / r**3
+        ay = M0 * (Y0 - y) / r**3
+
+        vx += ax
+        vy += ay
+
+        x += vx
+        y += vy
+
+        screen.blit(bg, (0, 0))
+        screen.blit(planet, (int(x), int(y)))
+        pygame.display.update()
+
+        if r < CRASH_DIST:
+            done = True
+            print("Crashed")
+            break
+        if r > OUT_DIST:
+            done = True
+            print("Out of system")
+            break
+
+if name == "main": main()
+```
+
+## Данные и графики 
 В ходе полёта были получены некоторые данные. Со всем объёмом информации вы можете ознакомится по ссылке: 
 
 Далее графики некоторых характеристик:
@@ -321,30 +381,30 @@
 - ось Y - соответствующие величины;
 - значения даны в системе СИ.
 
-Скорость
+**Скорость**
 
-Обратим внимание на пики графика - это следствие сброса ступеней. Также заметим, что к концу оси X график начинает убывать, т. к. к этому моменту выключается тяга.![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.032.png)Скорость, ускорение, тяга
+## ![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.032.png)
 
-Заметим, что уровень тяги меняется трижды вследствие сброса ступеней. Также характер ускорения меняется в зависимости от текущей ступени.![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.033.png)
+Обратим внимание на пики графика - это следствие сброса ступеней. Также заметим, что к концу оси X график начинает убывать, т. к. к этому моменту выключается тяга.
+
+Заметим, что уровень тяги меняется трижды вследствие сброса ступеней. Также характер ускорения меняется в зависимости от текущей ступени.
+## ![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.033.png)
 
 Высота над поверхностью
 ## ![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.034.png)
 Изменение скорости относительно ступеней аппарата
-## ![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.035.png)
-##
-## **Глава 4.Вывод.**
+## ![Диаграмма](Aspose.Words.12a2ca21-b04a-491f-b56b-dae33b4890f3.035.png) 
+## Глава 4.Вывод
 
 В ходе курсовой работы нашей командой были получены фотографии обратной стороны луны в Kerbal Space Program. Были составлены математическая и физическая модели расчетов, необходимых для полёта и был выполнен запуск ракеты-носителя Протон-М в KSP. Также мы составили автопилот для данной ракеты при помощи мода kos. Для более удобного ознакомления с материалами нашей работы наша команда записала небольшой видеоролик о проделанной нами деятельности.
 
 
 
-**Использованные источники**
-**
-
+## Использованные источники
 
 1. Создаем симулятор солнечной системы // Хабр URL: https://habr.com/ru/post/197754/ (дата обращения: 13.12.2022).
-1. ` `kOS: Kerbal Operating System // kOS URL: https://ksp-kos.github.io/KOS/#kos-kerbal-operating-system (дата обращения: 13.12.2022).
-1. ` `kna27 / ksp-data-export // Github URL: https://github.com/kna27/ksp-data-export (дата обращения: 13.12.2022).
+1. kOS: Kerbal Operating System // kOS URL: https://ksp-kos.github.io/KOS/#kos-kerbal-operating-system (дата обращения: 13.12.2022).
+1. kna27 / ksp-data-export // Github URL: https://github.com/kna27/ksp-data-export (дата обращения: 13.12.2022).
 1. Протон-М, Протон-К // SPACEDOCK.ru URL: https://spacedock.ru/4484-proton-m-proton-k.html (дата обращения: 13.12.2022).
 1. KSP - How to get to the moon (aka Mun) - Tutorial for Beginners // YouTube URL: https://www.youtube.com/watch?v=uCBSpUXrezk (дата обращения: 13.12.2022).
 1. Протон-М // Wikipedia URL: https://translated.turbopages.org/proxy\_u/en-ru.ru.8a332669-639ae389-3eafdcb8-74722d776562/https/en.wikipedia.org/wiki/Proton-M (дата обращения: 13.12.2022).Протон-М // Wikipedia URL: https://translated.turbopages.org/proxy\_u/en-ru.ru.8a332669-639ae389-3eafdcb8-74722d776562/https/en.wikipedia.org/wiki/Proton-M (дата обращения: 13.12.2022).
@@ -352,7 +412,7 @@
 1. Космические скорости // Asteropa URL: https://asteropa.ru/kosmicheskie-skorosti/ (дата обращения: 13.12.2022).
 1. Как на самом деле фотографировали обратную сторону Луны // TechInsider URL: https://www.techinsider.ru/technologies/9815-temnaya-storona-luny-pervye-fotografii-nevidimoy-storony-luny/ (дата обращения: 20.12.2022).
 1. Богатов Г. Б. Как было получено изображение обратной стороны Луны. - СПб.: Государственное энергетическое издательство, 1961. - 66 с.
-1. ` `Т.М. Энеев, Э.Л. Аким. Академик М.В. Келдыш. Механика космического полёта. — Институт прикладной математики им. М. В. Келдыша, 2014. - 43 с.
+1. Т.М. Энеев, Э.Л. Аким. Академик М.В. Келдыш. Механика космического полёта. — Институт прикладной математики им. М. В. Келдыша, 2014. - 43 с.
 
 
 
