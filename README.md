@@ -17,13 +17,13 @@
 <https://spacedock.ru/index.php?do=download&id=5064>
 
 ## Download KSP
-***For MacOS*** <https://appstorrent.ru/628-kerbal-space-program.html> \
-***For Windows*** <https://s1.thelastgame.club/244-kerbal-space-program.html> \
-***For Linux*** <http://ru.softoware.org/simulators/download-kerbal-space-program-71896-for-linux.html>
+[***For MacOS***](https://appstorrent.ru/628-kerbal-space-program.html) \
+[***For Windows***](https://s1.thelastgame.club/244-kerbal-space-program.html) \
+[***For Linux***](http://ru.softoware.org/simulators/download-kerbal-space-program-71896-for-linux.html)
 
 ## AP-for-KSP
 Автопилот для ракетоносителя в KSP (написан на языке, предложенном дополнением KOS для KSP \
-Само дополнение: <https://github.com/KSP-KOS/KOS/releases>
+Само [дополнение](https://github.com/KSP-KOS/KOS/releases)
 
 ## Реальный пример 
 21 ноября 2022 года. Корабль “Орион” совершил самый близкий облет луны (на расстоянии 130 км)
