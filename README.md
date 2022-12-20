@@ -16,7 +16,7 @@
 ## Proton-M в KSP
 <https://spacedock.ru/index.php?do=download&id=5064>
 
-## Скачивание KSP
+## Download KSP
 ***For MacOS*** <https://appstorrent.ru/628-kerbal-space-program.html> \
 ***For Windows*** <https://s1.thelastgame.club/244-kerbal-space-program.html> \
 ***For Linux*** <http://ru.softoware.org/simulators/download-kerbal-space-program-71896-for-linux.html>
