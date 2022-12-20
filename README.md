@@ -5,16 +5,21 @@
 # Навигация 
 
 ## Report
-Отчет по проекту [{Report}](./Report/REPORT/README.md)
+Отчет по проекту [Report](./Report/README.md)
 
 ## Data From KSP 
-В таблице собраны все, полученные в ходе полета, данные [{DATA}](./Data-from-KSP/README.md)
+В таблице собраны все, полученные в ходе полета, данные [DATA](./Data-from-KSP/README.md)
 
 ## PyGame-simulation 
-В папке находится код на языке Python, с помощью которого можно наглядно рассмотреть суть гравитационного маневра [{Py}](./PyGame-simulation/readme.md)
+В папке находится код на языке Python, с помощью которого можно наглядно рассмотреть суть гравитационного маневра [Py](./PyGame-simulation/readme.md)
 
 ## Proton-M в KSP
 <https://spacedock.ru/index.php?do=download&id=5064>
+
+## Download KSP
+***For MacOS*** <https://appstorrent.ru/628-kerbal-space-program.html> \
+***For Windows*** <https://s1.thelastgame.club/244-kerbal-space-program.html> \
+***For Linux*** <http://ru.softoware.org/simulators/download-kerbal-space-program-71896-for-linux.html>
 
 ## AP-for-KSP
 Автопилот для ракетоносителя в KSP (написан на языке, предложенном дополнением KOS для KSP \
