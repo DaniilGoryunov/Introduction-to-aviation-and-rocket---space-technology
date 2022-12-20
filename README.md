@@ -5,7 +5,7 @@
 # Навигация 
 
 ## Report
-Отчет по проекту [{Report}](./Report/README.md)
+Отчет по проекту [{Report}](./Report/REPORT/README.md)
 
 ## Data From KSP 
 В таблице собраны все, полученные в ходе полета, данные [{DATA}](./Data-from-KSP/README.md)
